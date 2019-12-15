@@ -16,7 +16,9 @@ The Advanced Custom Fields plugin provides a nice interface which is convenient 
 
 Install this package via Composer:
 
-`composer require pxlrbt/acf-confgurator`
+```
+composer require pxlrbt/acf-confgurator
+```
 
 ## Usage (Example)
 
@@ -59,8 +61,8 @@ Group::make('Test group')
 
 This plugin doesn't fit your needs? Here are two alternatives:
 
-- (ACF Code Helper)[https://github.com/RadoslavGeorgiev/acf-code-helper/wiki]
-- (ACF Builder)[https://github.com/StoutLogic/acf-builder]
+- [ACF Code Helper by RadoslavGeorgiev](https://github.com/RadoslavGeorgiev/acf-code-helper/wiki)
+- [ACF Builder by StoutLogic](https://github.com/StoutLogic/acf-builder)
 
 ## Contributing
 
