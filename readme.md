@@ -2,7 +2,7 @@
 
 __A wrapper for easy local Advanced Custom Fields configuration in php.__
 
-ACF Configurator comes into play when you want to define Advanced Custom Fields groups via PHP and not via database. Since ACFs standard way of configuration is a long multidimensional array, it gets confusing very fast. ACF Configurator provides an easy, intuive way to configure ACF groups and fields. It uses a short, OOP oriented syntax for configuration.
+ACF Configurator comes into play when you want to define Advanced Custom Fields groups in PHP and not via database. Since ACFs standard way of configuration is a long multidimensional array, it gets confusing very fast. ACF Configurator provides an easy, intuive way to configure ACF groups and fields. It uses a short, OOP oriented syntax for configuration.
 
 ## Why not use the Advanced Custom Fields GUI?
 
