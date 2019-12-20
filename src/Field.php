@@ -106,11 +106,14 @@ class Field extends Component
         return $this;
     }
 
-    public function wrapper(array $wrapper)
+    public function wrapper(float $width, string $class = null, string $id = null)
     {
-        // Width, class, id
+        $this->wrapper = [
+            'width' => $width,
+            'class' => $class,
+            'id' => $id
+        ];
 
-        $this->wrapper = $wrapper;
         return $this;
     }
 
