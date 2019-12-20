@@ -78,9 +78,10 @@ class Group extends Component
     protected $hide_on_screen = [];
 
 
-    public function __construct($title)
+    public function __construct($name, $title)
     {
         $this->title = $title;
+        $this->key('field_' . $name);
         add_action('acf/init', [$this, 'register']);
     }
 
