@@ -1,6 +1,6 @@
 <?php
 
-namespace pxlrbt\AcfConfigurator;
+namespace pxlrbt\AcfConfigurator\Fields;
 
 use pxlrbt\AcfConfigurator\Field;
 use pxlrbt\AcfConfigurator\Layout;
