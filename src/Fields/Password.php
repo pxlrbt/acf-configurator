@@ -8,7 +8,7 @@ use pxlrbt\AcfConfigurator\Fields\Properties\Placeholder;
 
 class Password extends Field
 {
-    use Placeholder, AppendPrepend;
+    use AppendPrepend, Placeholder;
 
     protected $type = 'password';
 }

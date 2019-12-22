@@ -25,35 +25,35 @@ composer require pxlrbt/acf-confgurator
 Just import ACF Configurator and start configuration. Group class takes care of registration.
 
 ```php
-Group::make('Test group')
+Group::make('Test group', 'test')
     ->location(function($condition) {
-        $condition->if(Location::PARAM_POST_TEMPLATE, Location::OPERATOR_EQUALS, 'template.php')
-            ->andIf(Location::PARAM_POST_TYPE, Location::OPERATOR_EQUALS, 'page');
+        $condition->if(Location::$PARAM_POST_TEMPLATE, Location::$OPERATOR_EQUALS, 'template.php')
+            ->andIf(Location::$PARAM_POST_TYPE, Location::$OPERATOR_EQUALS, 'page');
     })
     ->fields([
-        Text::make('text', 'Text field')
+        Text::make('Text field', 'text')
             ->placeholder('Placeholder')
             ->required(true),
 
-        TrueFalse::make('show_email', 'Show email?')
+        TrueFalse::make('Show email?', 'show_email')
             ->select2(true),
 
-        Email::make('email', 'Email address')
+        Email::make('Email address', 'email')
             ->condition(function($condition) {
-                $condition->if('field_show_email', Condition::OPERATOR_EQUALS, true);
+                $condition->if('field_show_email', Condition::$OPERATOR_EQUALS, true);
             })
             ->required(true)
             ->placeholder('your-email@example.com'),
 
-        Repeater::make('items', 'Items')
+        Repeater::make('Items', 'items')
             ->fields([
-                Textfield::make('item__description', 'Description'),
-                Image::make('item__image', 'Image')
-                    ->format(Image::FORMAT_ID)
+                Textfield::make('Description', 'description'),
+                Image::make('Image', 'item__image')
+                    ->returnFormat(Image::$FORMAT_ID)
             ])
     ])
-    ->hide(Group::HIDE_EDITOR)
-    ->hide(Group::HIDE_TRACKBACKS);
+    ->hide(Group::$HIDE_EDITOR)
+    ->hide(Group::$HIDE_TRACKBACKS);
 ```
 
 

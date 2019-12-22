@@ -11,7 +11,7 @@ use pxlrbt\AcfConfigurator\Fields\Properties\ReturnFormats\Choices as ReturnForm
 
 class Radio extends Field
 {
-    use Choices, LayoutChoices, Nullable, DefaultValue, ReturnFormatChoices;
+    use Choices, DefaultValue, LayoutChoices, Nullable, ReturnFormatChoices;
 
     protected $type = 'radio';
     protected $other_choice = false;

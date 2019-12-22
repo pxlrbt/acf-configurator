@@ -8,7 +8,7 @@
             "email": "info@pixelarbeit.de"
         }
     ],
-    "version": "0.1",
+    "version": "0.2.1",
     "autoload": {
         "psr-4": {
             "pxlrbt\\AcfConfigurator\\": "src/"

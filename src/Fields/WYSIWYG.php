@@ -3,9 +3,12 @@
 namespace pxlrbt\AcfConfigurator\Fields;
 
 use pxlrbt\AcfConfigurator\Field;
+use pxlrbt\AcfConfigurator\Fields\Properties\DefaultValue;
 
 class WYSIWYG extends Field
 {
+    use DefaultValue;
+
     public static $TABS_TEXT = 'text';
     public static $TABS_VISUAL = 'visual';
     public static $TABS_BOTH = 'all';

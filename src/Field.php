@@ -19,7 +19,6 @@ abstract class Field extends Component
 	protected $required = false;
 	protected $conditional_logic = [];
 	protected $wrapper = [] ;
-	protected $default_value = '';
 
 
     public function __construct($label, $name)
@@ -174,20 +173,6 @@ abstract class Field extends Component
             'id' => $id
         ];
 
-        return $this;
-    }
-
-    /**
-     * Set a default value used by ACF if no value has yet been saved
-     *
-     * @param string $default
-     * @return self
-     * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
-     */
-    public function default(string $default) : self
-    {
-        $this->default_value = $default;
         return $this;
     }
 }
