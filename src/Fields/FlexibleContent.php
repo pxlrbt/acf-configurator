@@ -3,46 +3,19 @@
 namespace pxlrbt\AcfConfigurator\Fields;
 
 use pxlrbt\AcfConfigurator\Field;
+use pxlrbt\AcfConfigurator\Fields\Properties\ButtonLabel;
+use pxlrbt\AcfConfigurator\Fields\Properties\MinMax;
+use pxlrbt\AcfConfigurator\Fields\Properties\Layouts\SubFields as LayoutSubFields;
 use pxlrbt\AcfConfigurator\Layout;
 
 
 
 class FlexibleContent extends Field
 {
-    public const LAYOUT_TABLE = 'table';
-    public const LAYOUT_BLOCK = 'block';
-    public const LAYOUT_ROW = 'row';
+    use ButtonLabel, MinMax, LayoutSubFields;
 
-    /**
-     * Field type
-     *
-     * @var string
-     */
     protected $type = 'flexible_content';
-
-
     protected $layouts = [];
-
-    /**
-     * Minimum amount of items to add
-     *
-     * @var integer
-     */
-    protected $min;
-
-    /**
-     * Maximum amount of items to add
-     *
-     * @var integer
-     */
-    protected $max;
-
-    /**
-     * Add row button text
-     *
-     * @var string
-     */
-    protected $button_label;
 
     /**
      * Override field construction method to add default button label but run parent constructor after that
@@ -51,60 +24,40 @@ class FlexibleContent extends Field
      * @param string $key   Field key.
      * @param string $name  Field name.
      */
-    public function __construct($name, $label)
+    public function __construct(string $label, string $name)
     {
         $this->buttonLabel(__( 'Add Row', 'acf'));
-        parent::__construct($name, $label);
+        parent::__construct($label, $name);
     }
 
     /**
-     * Set maximum amount of layouts
+     * Add multiple flexible content layouts
      *
-     * @param integer $max Maximum amount.
+     * @param array $layouts
      * @return self
+     * @author Dennis Koch <info@pixelarbeit.de>
+     * @since 1.0.0
      */
-    public function max(int $value)
-    {
-        $this->max = $value;
-        return $this;
-    }
-
-    /**
-     * Set minimum amount of layouts
-     *
-     * @param integer $min Minimum amount.
-     * @return self
-     */
-    public function min(int $value)
-    {
-        $this->min = $value;
-        return $this;
-    }
-
-    /**
-     * Set add row button label
-     *
-     * @param string $button_label Text to show inside button.
-     * @return self
-     */
-    public function buttonLabel(string $value)
-    {
-        $this->button_label = $value;
-        return $this;
-    }
-
-
-    public function layouts(array $layouts)
+    public function addLayouts(array $layouts) : self
     {
         foreach ($layouts as $layout) {
-            $this->layout($layout);
+            $this->addLayout($layout);
         }
 
         return $this;
     }
 
-    public function layout(Layout $layout)
+    /**
+     * Add a flexible content layout.
+     *
+     * @param Layout $layout
+     * @return self
+     * @author Dennis Koch <info@pixelarbeit.de>
+     * @since 1.0.0
+     */
+    public function addLayout(Layout $layout) : self
     {
         $this->layouts[] = $layout;
+        return $this;
     }
 }

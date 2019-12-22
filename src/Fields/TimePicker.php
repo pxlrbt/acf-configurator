@@ -3,23 +3,12 @@
 namespace pxlrbt\AcfConfigurator\Fields;
 
 use pxlrbt\AcfConfigurator\Field;
+use pxlrbt\AcfConfigurator\Fields\Properties\DisplayFormat;
+use pxlrbt\AcfConfigurator\Fields\Properties\ReturnFormats\Plain as ReturnFormatPlain;
 
 class TimePicker extends Field
 {
+    use DisplayFormat, ReturnFormatPlain;
+
     protected $type = 'time_picker';
-
-    protected $display_format;
-    protected $return_format;
-
-    public function displayFormat(string $value)
-    {
-        $this->display_format = $value;
-        return $this;
-    }
-
-    public function returnFormat(string $value)
-    {
-        $this->return_format = $value;
-        return $this;
-    }
 }

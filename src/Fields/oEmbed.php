@@ -11,15 +11,13 @@ class oEmbed extends Field
     protected $width;
     protected $height;
 
-
-
-    public function width(int $value)
+    public function width(int $value) : self
     {
         $this->width = $value;
         return $this;
     }
 
-    public function height(int $value)
+    public function height(int $value) : self
     {
         $this->height = $value;
         return $this;

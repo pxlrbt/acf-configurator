@@ -3,27 +3,22 @@
 namespace pxlrbt\AcfConfigurator\Fields;
 
 use pxlrbt\AcfConfigurator\Field;
+use pxlrbt\AcfConfigurator\Fields\Properties\Endpoint;
 
 class Tab extends Field
 {
-    public const PLACEMENT_TOP = 'top';
-    public const PLACEMENT_LEFT = 'left';
+    use Endpoint;
+
+    public static $PLACEMENT_TOP = 'top';
+    public static $PLACEMENT_LEFT = 'left';
 
     protected $type = 'tab';
-
     protected $placement = false;
-    protected $endpoint = false;
 
-    public function placement(string $value)
+    public function placement(string $value) : self
     {
-        $this->validateOptions('placement', $value, [self::PLACEMENT_LEFT, self::PLACEMENT_TOP]);
+        $this->validateOptions('placement', $value, [self::$PLACEMENT_LEFT, self::$PLACEMENT_TOP]);
         $this->placement = $value;
-        return $this;
-    }
-
-    public function endpoint(string $value)
-    {
-        $this->endpoint = $value;
         return $this;
     }
 }

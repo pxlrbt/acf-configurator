@@ -3,24 +3,11 @@
 namespace pxlrbt\AcfConfigurator\Fields;
 
 use pxlrbt\AcfConfigurator\Field;
+use pxlrbt\AcfConfigurator\Fields\Properties\Placeholder;
 
 class URL extends Field
 {
+    use Placeholder;
+
     protected $type = 'url';
-
-    /* (string) Appears within the input. Defaults to '' */
-	protected $placeholder = '';
-
-    /**
-     * Set the value of placeholder
-     *
-     * @param   mixed  $placeholder
-     *
-     * @return  self
-     */
-    public function placeholder(string $value)
-    {
-        $this->placeholder = $value;
-        return $this;
-    }
 }

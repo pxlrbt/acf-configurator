@@ -3,49 +3,15 @@
 namespace pxlrbt\AcfConfigurator\Fields;
 
 use pxlrbt\AcfConfigurator\Field;
+use pxlrbt\AcfConfigurator\Fields\Properties\Multiple;
+use pxlrbt\AcfConfigurator\Fields\Properties\Nullable;
+use pxlrbt\AcfConfigurator\Fields\Properties\PostType;
+use pxlrbt\AcfConfigurator\Fields\Properties\Taxonomy;
+use pxlrbt\AcfConfigurator\Fields\Properties\ReturnFormats\Post as ReturnFormatPost;
 
 class PostObject extends Field
 {
-    public const FORMAT_OBJECT = 'object';
-    public const FORMAT_ID = 'id';
+    use Nullable, Multiple, PostType, Taxonomy, ReturnFormatPost;
 
     protected $type = 'post_object';
-
-    protected $post_type = [];
-    protected $taxonomy = [];
-    protected $allow_null = false;
-    protected $multiple = false;
-    protected $format = self::FORMAT_OBJECT;
-
-
-    public function format(string $value)
-    {
-        $this->validateOptions('format', $value, [self::FORMAT_ID, self::FORMAT_OBJECT]);
-        $this->format = $value;
-        return $this;
-    }
-
-    public function nullable(bool $value)
-    {
-        $this->allow_null = $value;
-        return $this;
-    }
-
-    public function multiple(bool $value)
-    {
-        $this->multiple = $value;
-        return $this;
-    }
-
-    public function taxonomy(string $value)
-    {
-        $this->taxonomy[] = $value;
-        return $this;
-    }
-
-    public function postType(string $value)
-    {
-        $this->post_type[] = $value;
-        return $this;
-    }
 }

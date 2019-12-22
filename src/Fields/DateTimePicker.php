@@ -3,31 +3,13 @@
 namespace pxlrbt\AcfConfigurator\Fields;
 
 use pxlrbt\AcfConfigurator\Field;
+use pxlrbt\AcfConfigurator\Fields\Properties\DisplayFormat;
+use pxlrbt\AcfConfigurator\Fields\Properties\FirstDay;
+use pxlrbt\AcfConfigurator\Fields\Properties\ReturnFormats\Plain as ReturnFormatPlain;
 
 class DateTimePicker extends Field
 {
+    use DisplayFormat, FirstDay, ReturnFormatPlain;
+
     protected $type = 'date_time_picker';
-
-    protected $display_format = 'd.m.Y, H:i:s';
-    protected $return_format = 'Y-m-d H-i-s';
-    protected $first_day = 1;
-
-    public function displayFormat(string $value)
-    {
-        $this->display_format = $value;
-        return $this;
-    }
-
-    public function returnFormat(string $value)
-    {
-        $this->return_format = $value;
-        return $this;
-    }
-
-    public function firstDay(int $value)
-    {
-        // @TODO: Add validation
-        $this->first_day = $value;
-        return $this;
-    }
 }

@@ -6,20 +6,19 @@ use pxlrbt\AcfConfigurator\Field;
 
 class WYSIWYG extends Field
 {
-    public const TABS_TEXT = 'text';
-    public const TABS_VISUAL = 'visual';
-    public const TABS_BOTH = 'all';
+    public static $TABS_TEXT = 'text';
+    public static $TABS_VISUAL = 'visual';
+    public static $TABS_BOTH = 'all';
 
-    public const TOOLBAR_BASIC = 'basic';
-    public const TOOLBAR_FULL = 'full';
+    public static $TOOLBAR_BASIC = 'basic';
+    public static $TOOLBAR_FULL = 'full';
 
     protected $type = 'wysiwyg';
 
-    protected $tabs = self::TABS_BOTH;
-    protected $toolbar = self::TOOLBAR_FULL;
+    protected $tabs = 'all';
+    protected $toolbar = 'full';
     protected $media_upload = false;
     protected $delay = false;
-
 
     /**
      * Set the value of tabs
@@ -27,9 +26,9 @@ class WYSIWYG extends Field
      * @param   string  $tabs
      * @return  self
      */
-    public function tabs(string $value)
+    public function tabs(string $value) : self
     {
-        $this->validateOptions('tabs', $value, [self::TABS_TEXT, self::TABS_VISUAL, self::TABS_BOTH]);
+        $this->validateOptions('tabs', $value, [self::$TABS_TEXT, self::$TABS_VISUAL, self::$TABS_BOTH]);
         $this->tabs = $value;
         return $this;
     }
@@ -40,20 +39,20 @@ class WYSIWYG extends Field
      * @param   string  $toolbar
      * @return  self
      */
-    public function toolbar(string $value)
+    public function toolbar(string $value) : self
     {
-        $this->validateOptions('toolbar', $value, [self::TOOLBAR_BASIC, self::TOOLBAR_FULL]);
+        $this->validateOptions('toolbar', $value, [self::$TOOLBAR_BASIC, self::$TOOLBAR_FULL]);
         $this->toolbar = $value;
         return $this;
     }
 
-    public function mediaUpload(bool $value)
+    public function mediaUpload(bool $value) : self
     {
         $this->media_upload = $value;
         return $this;
     }
 
-    public function delay(bool $value)
+    public function delay(bool $value) : self
     {
         $this->delay = $value;
         return $this;

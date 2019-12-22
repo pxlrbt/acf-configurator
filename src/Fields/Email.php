@@ -3,66 +3,13 @@
 namespace pxlrbt\AcfConfigurator\Fields;
 
 use pxlrbt\AcfConfigurator\Field;
+use pxlrbt\AcfConfigurator\Fields\Properties\AppendPrepend;
+use pxlrbt\AcfConfigurator\Fields\Properties\DefaultValue;
+use pxlrbt\AcfConfigurator\Fields\Properties\Placeholder;
 
 class Email extends Field
 {
+    use AppendPrepend, DefaultValue, Placeholder;
+
     protected $type = 'email';
-
-	protected $default;
-    /* (string) Appears within the input. Defaults to '' */
-	protected $placeholder;
-
-	/* (string) Appears before the input. Defaults to '' */
-	protected $prepend;
-
-	/* (string) Appears after the input. Defaults to '' */
-    protected $append;
-
-    /**
-     * Set the value of default
-     *
-     * @param   mixed  $default
-     * @return  self
-     */
-    public function default(string $value)
-    {
-        $this->default = $value;
-        return $this;
-    }
-
-    /**
-     * Set the value of placeholder
-     *
-     * @param   mixed  $placeholder
-     * @return  self
-     */
-    public function placeholder(string $value)
-    {
-        $this->placeholder = $value;
-        return $this;
-    }
-
-    /**
-     * Set the value of prepend
-     *
-     * @param   mixed  $prepend
-     * @return  self
-     */
-    public function prepend(string $value)
-    {
-        $this->prepend = $value;
-        return $this;
-    }
-
-    /**
-     * Set the value of append
-     *
-     * @param   mixed  $append
-     * @return  self
-     */
-    public function append(string $value)
-    {
-        $this->append = $value;
-        return $this;
-    }
 }

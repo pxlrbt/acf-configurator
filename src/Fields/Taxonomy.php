@@ -3,63 +3,49 @@
 namespace pxlrbt\AcfConfigurator\Fields;
 
 use pxlrbt\AcfConfigurator\Field;
+use pxlrbt\AcfConfigurator\Fields\Properties\Taxonomy as PropertiesTaxonomy;
+use pxlrbt\AcfConfigurator\Fields\Properties\ReturnFormats\Post as ReturnFormatPost;
+
 
 class Taxonomy extends Field
 {
-    public const FORMAT_OBJECT = 'object';
-    public const FORMAT_ID = 'id';
+    use PropertiesTaxonomy, ReturnFormatPost;
 
-    public const FIELD_TYPE_CHECKBOX = 'checkbox';
-    public const FIELD_TYPE_MULTISELECT = 'multi_select';
-    public const FIELD_TYPE_RADIO = 'radio';
-    public const FIELD_TYPE_SELECT = 'select';
+    public static $FIELD_TYPE_CHECKBOX = 'checkbox';
+    public static $FIELD_TYPE_MULTISELECT = 'multi_select';
+    public static $FIELD_TYPE_RADIO = 'radio';
+    public static $FIELD_TYPE_SELECT = 'select';
 
     protected $type = 'taxonomy';
 
-    protected $taxonomy;
-    protected $field_type = self::FIELD_TYPE_CHECKBOX;
+    protected $field_type = 'checkbox'; //self::$FIELD_TYPE_CHECKBOX;
     protected $add_term = true;
     protected $save_terms = false;
     protected $load_terms = false;
-    protected $return_format = self::FORMAT_ID;
 
-
-
-    public function taxonomy(string $value)
+    public function fieldType(string $value) : self
     {
-        $this->taxonomy = $value;
-        return $this;
-    }
-
-    public function fieldType(string $value)
-    {
-        $this->validateOptions('fieldType', $value, [self::FIELD_TYPE_CHECKBOX, self::FIELD_TYPE_MULTISELECT, self::FIELD_TYPE_RADIO, self::FIELD_TYPE_SELECT]);
+        $validOptions = [self::$FIELD_TYPE_CHECKBOX, self::$FIELD_TYPE_MULTISELECT, self::$FIELD_TYPE_RADIO, self::$FIELD_TYPE_SELECT];
+        $this->validateOptions('fieldType', $value, $validOptions);
         $this->field_type = $value;
         return $this;
     }
 
-    public function addTerm(bool $value)
+    public function addTerm(bool $value) : self
     {
         $this->add_term = $value;
         return $this;
     }
 
-    public function saveTerms(bool $value)
-    {
-        $this->save_terms = $value;
-        return $this;
-    }
-
-    public function loadTerms(bool $value)
+    public function loadTerms(bool $value) : self
     {
         $this->load_terms = $value;
         return $this;
     }
 
-    public function format(string $value)
+    public function saveTerms(bool $value) : self
     {
-        $this->validateOptions('format', $value, [self::FORMAT_ID, self::FORMAT_OBJECT]);
-        $this->return_format = $value;
+        $this->save_terms = $value;
         return $this;
     }
 }

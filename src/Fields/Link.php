@@ -6,17 +6,16 @@ use pxlrbt\AcfConfigurator\Field;
 
 class Link extends Field
 {
-    public const FORMAT_URL = 'url';
-    public const FORMAT_ARRAY = 'array';
+    public static $FORMAT_URL = 'url';
+    public static $FORMAT_ARRAY = 'array';
 
     protected $type = 'link';
 
-    protected $return_format = self::FORMAT_ARRAY;
+    protected $return_format = 'array';
 
-
-    public function format(string $value)
+    public function returnFormat(string $value) : self
     {
-        $this->validateOptions('format', $value, [self::FORMAT_ARRAY, self::FORMAT_URL]);
+        $this->validateOptions('format', $value, [self::$FORMAT_ARRAY, self::$FORMAT_URL]);
         $this->return_format = $value;
         return $this;
     }

@@ -11,25 +11,43 @@ class Condition extends Component
     use ValidateOptions;
 
     // Operator constants for autocompletion
-    public const OPERATOR_EQUALS = '==';
-    public const OPERATOR_NOT_EQUALS = '!=';
-    public const OPERATOR_NOT_EMPTY = '!=empty';
-    public const OPERATOR_EMPTY = '==empty';
-    public const OPERATOR_PATTERN = '==pattern';
-    public const OPERATOR_CONTAINS = '==contains';
+    public static $OPERATOR_EQUALS = '==';
+    public static $OPERATOR_NOT_EQUALS = '!=';
+    public static $OPERATOR_NOT_EMPTY = '!=empty';
+    public static $OPERATOR_EMPTY = '==empty';
+    public static $OPERATOR_PATTERN = '==pattern';
+    public static $OPERATOR_CONTAINS = '==contains';
 
 	protected $field;
 	protected $operator;
 	protected $value;
 
-    public function __construct($field, $operator, $value = null)
+    /**
+     * Create a new condition
+     *
+     * @param string  $field
+     * @param string  $operator
+     * @param mixed $value
+     * @author Dennis Koch <info@pixelarbeit.de>
+     * @since 1.0.0
+     */
+    public function __construct(string $field, string $operator, $value = null)
     {
         $this->field($field);
         $this->operator($operator);
         $this->value($value);
     }
 
-    public function field($field)
+    /**
+     * Set field for condition.
+     * This field the condition is validated against.
+     *
+     * @param Field|string $field
+     * @return self
+     * @author Dennis Koch <info@pixelarbeit.de>
+     * @since 1.0.0
+     */
+    public function field($field) : self
     {
         if ($field instanceof Field) {
             $this->field = $field->getKey();
@@ -40,14 +58,32 @@ class Condition extends Component
         return $this;
     }
 
-    public function operator(string $value)
+    /**
+     * Set conditions operator
+     *
+     * @param string $value
+     * @return self
+     * @author Dennis Koch <info@pixelarbeit.de>
+     * @since 1.0.0
+     */
+    public function operator(string $value) : self
     {
-        $this->validateOptions('operator', $value, [self::OPERATOR_CONTAINS, self::OPERATOR_EMPTY, self::OPERATOR_EQUALS, self::OPERATOR_NOT_EMPTY, self::OPERATOR_NOT_EQUALS, self::OPERATOR_PATTERN]);
+        $validOptions = [
+            self::$OPERATOR_CONTAINS, self::$OPERATOR_EMPTY, self::$OPERATOR_EQUALS,
+            self::$OPERATOR_NOT_EMPTY, self::$OPERATOR_NOT_EQUALS, self::$OPERATOR_PATTERN
+        ];
+
+        $this->validateOptions('operator', $value, $validOptions);
         $this->operator = $value;
         return $this;
     }
-
-    public function value($value)
+    /**
+     * Set conditions value
+     *
+     * @param string $value
+     * @return self this
+     */
+    public function value($value) : self
     {
         $this->value = $value;
         return $this;

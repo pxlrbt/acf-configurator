@@ -4,11 +4,26 @@ namespace pxlrbt\AcfConfigurator;
 
 abstract class Component
 {
+    /**
+     * Factory function to create a new instance
+     *
+     * @param array ...$args
+     * @return Component
+     * @author Dennis Koch <info@pixelarbeit.de>
+     * @since 1.0.0
+     */
     public static function make(...$args)
     {
         return new static(...$args);
     }
 
+    /**
+     * Cast component and sub fields to array
+     *
+     * @return array $config
+     * @author Dennis Koch <info@pixelarbeit.de>
+     * @since 1.0.0
+     */
     public function toArray()
     {
         $config = [];
@@ -32,5 +47,4 @@ abstract class Component
 
         return $config;
     }
-
 }
