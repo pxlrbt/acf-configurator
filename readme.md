@@ -25,7 +25,18 @@ composer require pxlrbt/acf-confgurator
 Just import ACF Configurator and start configuration. Group class takes care of registration.
 
 ```php
-Group::make('Test group', 'test')
+<?php
+
+use pxlrbt\AcfConfigurator\FieldGroup;
+use pxlrbt\AcfConfigurator\Condition\Condition;
+use pxlrbt\AcfConfigurator\Location\Location;
+use pxlrbt\AcfConfigurator\Fields\Email;
+use pxlrbt\AcfConfigurator\Fields\Text;
+use pxlrbt\AcfConfigurator\Fields\TrueFalse;
+use pxlrbt\AcfConfigurator\Fields\Repeater;
+use pxlrbt\AcfConfigurator\Fields\Image;
+
+FieldGroup::make('Test group', 'test')
     ->location(function($condition) {
         $condition->if(Location::$PARAM_POST_TEMPLATE, Location::$OPERATOR_EQUALS, 'template.php')
             ->andIf(Location::$PARAM_POST_TYPE, Location::$OPERATOR_EQUALS, 'page');
@@ -52,8 +63,8 @@ Group::make('Test group', 'test')
                     ->returnFormat(Image::$FORMAT_ID)
             ])
     ])
-    ->hide(Group::$HIDE_EDITOR)
-    ->hide(Group::$HIDE_TRACKBACKS);
+    ->hide(FieldGroup::$HIDE_EDITOR)
+    ->hide(FieldGroup::$HIDE_TRACKBACKS);
 ```
 
 
