@@ -30,7 +30,7 @@ abstract class Builder
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
-    public function if($field, $operator = null, $value = null) : self
+    public function if($field, $operator = null, $value = null)
     {
         $this->groups[] = [
             new static::$classname($field, $operator, $value)
@@ -49,7 +49,7 @@ abstract class Builder
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
-    public function andIf($field, $operator, $value = null) : self
+    public function andIf($field, $operator, $value = null)
     {
         $group = $this->getLastGroup();
         $group[] = new static::$classname($field, $operator, $value);

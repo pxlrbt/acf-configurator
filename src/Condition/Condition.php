@@ -47,7 +47,7 @@ class Condition
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
-    public function field($field) : self
+    public function field($field)
     {
         if ($field instanceof Field) {
             $this->field = $field->getKey();
@@ -66,7 +66,7 @@ class Condition
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
-    public function operator(string $value) : self
+    public function operator(string $value)
     {
         $validOptions = [
             self::$OPERATOR_CONTAINS, self::$OPERATOR_EMPTY, self::$OPERATOR_EQUALS,
@@ -83,7 +83,7 @@ class Condition
      * @param string $value
      * @return self this
      */
-    public function value($value) : self
+    public function value($value)
     {
         $this->value = $value;
         return $this;

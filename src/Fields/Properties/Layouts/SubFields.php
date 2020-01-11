@@ -17,7 +17,7 @@ trait SubFields
      * @param string $layout New layout.
      * @return self
      */
-    public function layout(string $value) : self
+    public function layout(string $value)
     {
         $this->validateOptions('layout', $value, [self::$LAYOUT_BLOCK, self::$LAYOUT_ROW, self::$LAYOUT_TABLE]);
         $this->layout = $value;

@@ -17,7 +17,7 @@ class PageLink extends Field
     protected $taxonomy = [];
     protected $allow_archives = false;
 
-    public function allowArchives(bool $value) : self
+    public function allowArchives(bool $value)
     {
         $this->allow_archives = $value;
         return $this;

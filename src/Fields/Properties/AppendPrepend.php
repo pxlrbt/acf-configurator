@@ -15,7 +15,7 @@ trait AppendPrepend
      *
      * @return  self
      */
-    public function prepend(string $value) : self
+    public function prepend(string $value)
     {
         $this->prepend = $value;
         return $this;
@@ -28,7 +28,7 @@ trait AppendPrepend
      *
      * @return  self
      */
-    public function append(string $value) : self
+    public function append(string $value)
     {
         $this->append = $value;
         return $this;

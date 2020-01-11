@@ -14,13 +14,13 @@ class Accordion extends Field
     protected $open = false;
     protected $multi_expand = false;
 
-    public function open(string $value) : self
+    public function open(string $value)
     {
         $this->open = $value;
         return $this;
     }
 
-    public function multiExpand(string $value) : self
+    public function multiExpand(string $value)
     {
         $this->multi_expand = $value;
         return $this;

@@ -92,7 +92,7 @@ class FieldGroup extends Component
      * @param string $title
      * @return self this
      */
-    public function title(string $title) : self
+    public function title(string $title)
     {
         $this->title = $title;
         return $this;
@@ -105,7 +105,7 @@ class FieldGroup extends Component
      * @param callable $callback
      * @return self this
      */
-    public function location(callable $callback) : self
+    public function location(callable $callback)
     {
         $builder = new Builder();
         $callback($builder);
@@ -119,7 +119,7 @@ class FieldGroup extends Component
      * @param array $fields
      * @return self this
      */
-    public function fields(array $fields) : self
+    public function fields(array $fields)
     {
         foreach ($fields as $field) {
             $this->field($field);
@@ -134,7 +134,7 @@ class FieldGroup extends Component
      * @param Field $field
      * @return self this
      */
-    public function field(Field $field) : self
+    public function field(Field $field)
     {
         $this->fields[] = $field;
         return $this;
@@ -147,7 +147,7 @@ class FieldGroup extends Component
      * @param integer $order
      * @return self this
      */
-    public function order(int $order) : self
+    public function order(int $order)
     {
         $this->menu_order = $order;
         return $this;
@@ -159,7 +159,7 @@ class FieldGroup extends Component
      * @param string $position
      * @return self this
      */
-    public function position(string $position) : self
+    public function position(string $position)
     {
         $this->validateOptions('position', $position, [self::$POSITION_AFTER_TITLE, self::$POSITION_NORMAL, self::$POSITION_SIDE]);
         $this->position = $position;
@@ -172,7 +172,7 @@ class FieldGroup extends Component
      * @param string $style
      * @return self this
      */
-    public function style(string $style) : self
+    public function style(string $style)
     {
         $this->validateOptions('style', $style, [self::$STYLE_DEFAULT, self::$STYLE_SEAMLESS]);
         $this->style = $style;
@@ -185,7 +185,7 @@ class FieldGroup extends Component
      * @param string $placement
      * @return self this
      */
-    public function labelPlacement(string $placement) : self
+    public function labelPlacement(string $placement)
     {
         $this->validateOptions('labelPlacement', $placement, [self::$LABEL_PLACEMENT_TOP, self::$LABEL_PLACEMENT_LEFT]);
         $this->label_placement = $placement;
@@ -198,7 +198,7 @@ class FieldGroup extends Component
      * @param string $placement
      * @return self this
      */
-    public function instructionPlacement(string $placement) : self
+    public function instructionPlacement(string $placement)
     {
         $this->validateOptions('instructionPlacement', $placement, [self::$INSTRUCTION_PLACEMENT_FIELD, self::$INSTRUCTION_PLACEMENT_LABEL]);
         $this->instruction_placement = $placement;
@@ -211,7 +211,7 @@ class FieldGroup extends Component
      * @param string $hide
      * @return self this
      */
-    public function hide(string $hide) : self
+    public function hide(string $hide)
     {
         $validArguments = [
             self::$HIDE_AUTHOR, self::$HIDE_CATEGORIES, self::$HIDE_COMMENTS,

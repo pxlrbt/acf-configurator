@@ -36,7 +36,7 @@ class Repeater extends Field
      * @param mixed $field The field object or key to use.
      * @return self
      */
-    public function collapsed($field) : self
+    public function collapsed($field)
     {
         if ($field instanceof Field) {
             $this->collapsed = $field->getKey();

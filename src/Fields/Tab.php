@@ -15,7 +15,7 @@ class Tab extends Field
     protected $type = 'tab';
     protected $placement = false;
 
-    public function placement(string $value) : self
+    public function placement(string $value)
     {
         $this->validateOptions('placement', $value, [self::$PLACEMENT_LEFT, self::$PLACEMENT_TOP]);
         $this->placement = $value;

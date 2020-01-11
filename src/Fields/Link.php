@@ -13,7 +13,7 @@ class Link extends Field
 
     protected $return_format = 'array';
 
-    public function returnFormat(string $value) : self
+    public function returnFormat(string $value)
     {
         $this->validateOptions('format', $value, [self::$FORMAT_ARRAY, self::$FORMAT_URL]);
         $this->return_format = $value;

@@ -65,7 +65,7 @@ class Location
      * @param string $operator
      * @return self this
      */
-    public function param(string $value) : self
+    public function param(string $value)
     {
         $validOptions = [
             self::$PARAM_POST_TYPE, self::$PARAM_POST_TEMPLATE, self::$PARAM_POST_STATUS,
@@ -89,7 +89,7 @@ class Location
      * @param string $operator
      * @return self this
      */
-    public function operator(string $operator) : self
+    public function operator(string $operator)
     {
         $validOptions = [
             self::$OPERATOR_CONTAINS, self::$OPERATOR_EMPTY, self::$OPERATOR_EQUALS,
@@ -107,7 +107,7 @@ class Location
      * @param string $value
      * @return self this
      */
-    public function value($value) : self
+    public function value($value)
     {
         $this->value = $value;
         return $this;

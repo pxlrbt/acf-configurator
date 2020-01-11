@@ -22,7 +22,7 @@ class Textarea extends Field
      *
      * @return  self
      */
-    public function rows(int $value) : self
+    public function rows(int $value)
     {
         $this->rows = $value;
         return $this;

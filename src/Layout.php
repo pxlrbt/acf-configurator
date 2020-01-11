@@ -43,7 +43,7 @@ class Layout extends Component
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
-    public function label(string $label) : self
+    public function label(string $label)
     {
         $this->label = $label;
         return $this;
@@ -57,7 +57,7 @@ class Layout extends Component
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
-    public function display(string $value) : self
+    public function display(string $value)
     {
         $this->validateOptions('display', $value, [self::$DISPLAY_BLOCK, self::$DISPLAY_ROW, self::$DISPLAY_TABLE]);
         $this->display = $value;

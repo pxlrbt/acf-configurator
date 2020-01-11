@@ -13,7 +13,7 @@ trait Placeholder
      *
      * @return  self
      */
-    public function placeholder(string $value) : self
+    public function placeholder(string $value)
     {
         $this->placeholder = $value;
         return $this;

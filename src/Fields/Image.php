@@ -23,7 +23,7 @@ class Image extends Field
      * @param   string  $preview size name
      * @return  self
      */
-    public function preview(string $value) : self
+    public function preview(string $value)
     {
         $this->preview_size = $value;
         return $this;

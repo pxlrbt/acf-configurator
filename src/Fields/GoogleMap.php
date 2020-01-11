@@ -13,25 +13,25 @@ class GoogleMap extends Field
     protected $zoom;
     protected $height;
 
-    public function lat(string $value) : self
+    public function lat(string $value)
     {
         $this->center_lat = $value;
         return $this;
     }
 
-    public function lng(string $value) : self
+    public function lng(string $value)
     {
         $this->center_lng = $value;
         return $this;
     }
 
-    public function zoom(string $value) : self
+    public function zoom(string $value)
     {
         $this->zoom = $value;
         return $this;
     }
 
-    public function height(string $value) : self
+    public function height(string $value)
     {
         $this->height = $value;
         return $this;

@@ -12,7 +12,7 @@ trait Step
      * @param   mixed  $step
      * @return  self
      */
-    public function step(int $value) : self
+    public function step(int $value)
     {
         $this->step = $value;
         return $this;

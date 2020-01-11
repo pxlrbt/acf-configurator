@@ -18,26 +18,26 @@ class CloneField extends Field
     protected $prefix_name = false;
     protected $clone = [];
 
-    public function display(string $value) : self
+    public function display(string $value)
     {
         $this->validateOptions('display', $value, [self::$DISPLAY_GROUP, self::$DISPLAY_SEAMLESS]);
         $this->display = $value;
         return $this;
     }
 
-    public function prefixLabel(bool $value) : self
+    public function prefixLabel(bool $value)
     {
         $this->prefix_label = $value;
         return $this;
     }
 
-    public function prefixName(bool $value) : self
+    public function prefixName(bool $value)
     {
         $this->prefix_name = $value;
         return $this;
     }
 
-    public function fields(array $fields) : self
+    public function fields(array $fields)
     {
         foreach ($fields as $field) {
             $this->field($field);
@@ -46,7 +46,7 @@ class CloneField extends Field
         return $this;
     }
 
-    public function field($field) : self
+    public function field($field)
     {
         if ($field instanceof Field) {
             $this->clone[] = $field->getKey();

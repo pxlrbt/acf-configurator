@@ -38,7 +38,7 @@ class FlexibleContent extends Field
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
-    public function addLayouts(array $layouts) : self
+    public function addLayouts(array $layouts)
     {
         foreach ($layouts as $layout) {
             $this->addLayout($layout);
@@ -55,7 +55,7 @@ class FlexibleContent extends Field
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
-    public function addLayout(Layout $layout) : self
+    public function addLayout(Layout $layout)
     {
         $this->layouts[] = $layout;
         return $this;

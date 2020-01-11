@@ -17,13 +17,13 @@ class Checkbox extends Field
     protected $allow_custom = false;
     protected $toggle = false;
 
-    public function allowCustom(bool $value) : self
+    public function allowCustom(bool $value)
     {
         $this->allow_custom = $value;
         return $this;
     }
 
-    public function toggle(bool $value) : self
+    public function toggle(bool $value)
     {
         $this->toggle = $value;
         return $this;

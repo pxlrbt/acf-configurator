@@ -12,7 +12,7 @@ trait FactoryPattern
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
-    public static function make(...$args) : self
+    public static function make(...$args)
     {
         return new static(...$args);
     }

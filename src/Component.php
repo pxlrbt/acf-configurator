@@ -16,6 +16,7 @@ abstract class Component
      * Factory function to create a new instance
      *
      * @param array ...$args
+     * @return mixed
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
@@ -87,7 +88,7 @@ abstract class Component
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
-    public function name(string $name) : self
+    public function name(string $name)
     {
         $this->name = $name;
         return $this;

@@ -18,7 +18,7 @@ class Gallery extends Field
 
     protected $type = 'gallery';
 
-    public function insert(string $value) : self
+    public function insert(string $value)
     {
         $this->validateOptions('insert', $value, [self::$INSERT_APPEND, self::$INSERT_PREPEND]);
         $this->insert = $value;

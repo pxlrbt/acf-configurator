@@ -14,7 +14,7 @@ class User extends Field
     protected $type = 'user';
     protected $role = [];
 
-    public function role(string $value) : self
+    public function role(string $value)
     {
         $this->role[] = $value;
         return $this;

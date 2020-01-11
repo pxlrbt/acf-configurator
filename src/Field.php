@@ -35,7 +35,7 @@ abstract class Field extends Component
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
-    public function label(string $label) : self
+    public function label(string $label)
     {
         $this->label = $label;
         return $this;
@@ -50,7 +50,7 @@ abstract class Field extends Component
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
-    public function instructions(string $instructions) : self
+    public function instructions(string $instructions)
     {
         $this->instructions = $instructions;
         return $this;
@@ -64,7 +64,7 @@ abstract class Field extends Component
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
-    public function required(bool $required) : self
+    public function required(bool $required)
     {
         $this->required = $required;
         return $this;
@@ -79,7 +79,7 @@ abstract class Field extends Component
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
-    public function condition(callable $callback) : self
+    public function condition(callable $callback)
     {
         $builder = new Builder();
         $callback($builder);
@@ -97,7 +97,7 @@ abstract class Field extends Component
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
-    public function wrapper(float $width, string $class = null, string $id = null) : self
+    public function wrapper(float $width, string $class = null, string $id = null)
     {
         $this->wrapper = [];
         $this->wrapper['width'] = $width;

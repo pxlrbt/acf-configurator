@@ -8,13 +8,13 @@ trait SubFields
 {
     protected $sub_fields = [];
 
-    public function field(Field $field) : self
+    public function field(Field $field)
     {
         $this->sub_fields[] = $field;
         return $this;
     }
 
-    public function fields(array $fields) : self
+    public function fields(array $fields)
     {
         foreach ($fields as $field) {
             $field->parent = $this;

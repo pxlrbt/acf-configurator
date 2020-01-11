@@ -16,7 +16,7 @@ class Select extends Field
     protected $type = 'select';
     protected $ui;
 
-    public function select2(bool $value) : self
+    public function select2(bool $value)
     {
         $this->ui = $value;
         return $this;

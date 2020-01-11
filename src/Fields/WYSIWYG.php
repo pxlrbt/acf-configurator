@@ -29,7 +29,7 @@ class WYSIWYG extends Field
      * @param   string  $tabs
      * @return  self
      */
-    public function tabs(string $value) : self
+    public function tabs(string $value)
     {
         $this->validateOptions('tabs', $value, [self::$TABS_TEXT, self::$TABS_VISUAL, self::$TABS_BOTH]);
         $this->tabs = $value;
@@ -42,20 +42,20 @@ class WYSIWYG extends Field
      * @param   string  $toolbar
      * @return  self
      */
-    public function toolbar(string $value) : self
+    public function toolbar(string $value)
     {
         $this->validateOptions('toolbar', $value, [self::$TOOLBAR_BASIC, self::$TOOLBAR_FULL]);
         $this->toolbar = $value;
         return $this;
     }
 
-    public function mediaUpload(bool $value) : self
+    public function mediaUpload(bool $value)
     {
         $this->media_upload = $value;
         return $this;
     }
 
-    public function delay(bool $value) : self
+    public function delay(bool $value)
     {
         $this->delay = $value;
         return $this;

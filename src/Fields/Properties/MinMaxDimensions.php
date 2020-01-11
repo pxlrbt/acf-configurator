@@ -9,25 +9,25 @@ trait MinMaxDimensions
     protected $max_width;
     protected $max_height;
 
-    public function minWidth(int $value) : self
+    public function minWidth(int $value)
     {
         $this->min_width = $value;
         return $this;
     }
 
-    public function maxWidth(int $value) : self
+    public function maxWidth(int $value)
     {
         $this->max_width = $value;
         return $this;
     }
 
-    public function minHeight(int $value) : self
+    public function minHeight(int $value)
     {
         $this->min_height = $value;
         return $this;
     }
 
-    public function maxHeight(int $value) : self
+    public function maxHeight(int $value)
     {
         $this->max_height = $value;
         return $this;

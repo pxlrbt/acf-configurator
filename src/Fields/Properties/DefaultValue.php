@@ -14,7 +14,7 @@ trait DefaultValue
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
-    public function default(string $default) : self
+    public function default(string $default)
     {
         $this->default_value = $default;
         return $this;

@@ -23,7 +23,7 @@ class Taxonomy extends Field
     protected $save_terms = false;
     protected $load_terms = false;
 
-    public function fieldType(string $value) : self
+    public function fieldType(string $value)
     {
         $validOptions = [self::$FIELD_TYPE_CHECKBOX, self::$FIELD_TYPE_MULTISELECT, self::$FIELD_TYPE_RADIO, self::$FIELD_TYPE_SELECT];
         $this->validateOptions('fieldType', $value, $validOptions);
@@ -31,19 +31,19 @@ class Taxonomy extends Field
         return $this;
     }
 
-    public function addTerm(bool $value) : self
+    public function addTerm(bool $value)
     {
         $this->add_term = $value;
         return $this;
     }
 
-    public function loadTerms(bool $value) : self
+    public function loadTerms(bool $value)
     {
         $this->load_terms = $value;
         return $this;
     }
 
-    public function saveTerms(bool $value) : self
+    public function saveTerms(bool $value)
     {
         $this->save_terms = $value;
         return $this;

@@ -16,7 +16,7 @@ class Radio extends Field
     protected $type = 'radio';
     protected $other_choice = false;
 
-    public function otherChoice(bool $value) : self
+    public function otherChoice(bool $value)
     {
         $this->other_choice = $value;
         return $this;

@@ -13,7 +13,7 @@ class Message extends Field
 
     protected $esc_html = false;
 
-    public function escapeHtml(bool $value) : self
+    public function escapeHtml(bool $value)
     {
         $this->esc_html = $value;
         return $this;

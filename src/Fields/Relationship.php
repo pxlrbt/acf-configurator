@@ -17,13 +17,13 @@ class Relationship extends Field
     protected $filters = [];
     protected $elements = [];
 
-    public function filter(string $value) : self
+    public function filter(string $value)
     {
         $this->filters[] = $value;
         return $this;
     }
 
-    public function element(string $value) : self
+    public function element(string $value)
     {
         $this->elements[] = $value;
         return $this;
