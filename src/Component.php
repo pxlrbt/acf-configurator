@@ -148,7 +148,7 @@ abstract class Component
             $parent = $parent->getParent();
         }
 
-        $key = preg_replace('/^[a-zA-Z0-9_]/', '_', $key);
+        $key = preg_replace('/[^\da-z_]/i', '', $key);
 
         return $this->getKeyPrefix() . $key;
     }
