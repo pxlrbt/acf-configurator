@@ -8,7 +8,7 @@ trait Taxonomy
 
     public function taxonomy(string $value)
     {
-        $this->taxonomy[] = $value;
+        $this->taxonomy = $value;
         return $this;
     }
 }

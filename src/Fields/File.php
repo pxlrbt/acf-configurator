@@ -12,5 +12,5 @@ class File extends Field
 {
     use Library, MinMaxSize, MimeTypes, ReturnFormatFile;
 
-    protected $type = 'image';
+    protected $type = 'file';
 }

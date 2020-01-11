@@ -17,8 +17,7 @@ trait SubFields
     public function fields(array $fields) : self
     {
         foreach ($fields as $field) {
-            $key = substr($field->getKey(), 6);
-            $field->key('field_' . $this->key . '__' . $key);
+            $field->parent = $this;
             $this->field($field);
         }
 

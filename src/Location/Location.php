@@ -2,12 +2,12 @@
 
 namespace pxlrbt\AcfConfigurator\Location;
 
-use pxlrbt\AcfConfigurator\Component;
+use pxlrbt\AcfConfigurator\Traits\ToArray;
 use pxlrbt\AcfConfigurator\Traits\ValidateOptions;
 
-class Location extends Component
+class Location
 {
-    use ValidateOptions;
+    use ToArray, ValidateOptions;
 
     // Param constants for autocompletion
     public static $PARAM_POST_TYPE = 'post_type';

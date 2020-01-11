@@ -10,11 +10,10 @@ abstract class Field extends Component
 {
     use ValidateOptions;
 
+    protected static $keyPrefix = 'field_';
     protected static $keys = [];
 
-	protected $key;
 	protected $label;
-	protected $name;
 	protected $instructions = '';
 	protected $required = false;
 	protected $conditional_logic = [];
@@ -23,77 +22,10 @@ abstract class Field extends Component
 
     public function __construct($label, $name)
     {
-        $this->name = $name;
-        $this->key('field_' . $name);
+        $this->name($name);
         $this->label($label);
     }
 
-    /**
-     * Set the fields key
-     * Unique identifier for the field. Must begin with 'field_'.
-     *
-     * @param string $key
-     * @return self
-     * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
-     */
-    public function key(string $key) : self
-    {
-        if (strpos($key, 'field_') === false) {
-            throw new InvalidArgumentException('Key must start with "field_"');
-        }
-
-        // if (in_array($key, static::$keys)) {
-        //     throw new InvalidArgumentException('Key must be unique');
-        // }
-
-        if ($this->key != null) {
-            array_splice(static::$keys, array_search($this->key, static::$keys), 1);
-        }
-
-        static::$keys[] = $key;
-        $this->key = $key;
-        return $this;
-    }
-
-    /**
-     * Get the fields key
-     *
-     * @return String $key
-     * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
-     */
-    public function getKey() : string
-    {
-        return $this->key;
-    }
-
-    /**
-     * Set the fields name
-     * Used to save and load data. Single word, no spaces. Underscores and dashes allowed.
-     *
-     * @param string $name
-     * @return self
-     * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
-     */
-    public function name(string $name) : self
-    {
-        $this->name = $name;
-        return $this;
-    }
-
-    /**
-     * Get the fields name
-     *
-     * @return void
-     * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
-     */
-    public function getName() : string
-    {
-        return $this->name;
-    }
 
     /**
      * Set the label which is visible when editing the field value
@@ -167,11 +99,16 @@ abstract class Field extends Component
      */
     public function wrapper(float $width, string $class = null, string $id = null) : self
     {
-        $this->wrapper = [
-            'width' => $width,
-            'class' => $class,
-            'id' => $id
-        ];
+        $this->wrapper = [];
+        $this->wrapper['width'] = $width;
+
+        if ($class != null) {
+            $this->wrapper['class'] = $class;
+        }
+
+        if ($id != null) {
+            $this->wrapper['id'] = $id;
+        }
 
         return $this;
     }

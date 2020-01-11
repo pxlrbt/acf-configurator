@@ -9,15 +9,15 @@ class Layout extends Component
 {
     use SubFields, ValidateOptions;
 
+    protected static $keyPrefix = 'layout_';
+
     public static $DISPLAY_BLOCK = 'block';
     public static $DISPLAY_TABLE = 'table';
     public static $DISPLAY_ROW = 'row';
 
     protected static $keys = [];
 
-    protected $key;
 	protected $label;
-	protected $name;
 	protected $display = 'block';
 
     /**
@@ -31,70 +31,8 @@ class Layout extends Component
      */
     public function __construct(string $label, string $name)
     {
-        $this->name = $name;
-        $this->key($name);
+        $this->name($name);
         $this->label($label);
-    }
-
-    /**
-     * Set
-     *
-     * @param string $key
-     * @return void
-     * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
-     */
-    public function key(string $key)
-    {
-        // if (in_array($key, static::$keys)) {
-        //     throw new InvalidArgumentException('Key must be unique');
-        // }
-
-        if ($this->key != null) {
-            array_splice(static::$keys, array_search($this->key, static::$keys), 1);
-        }
-
-        static::$keys[] = $key;
-        $this->key = $key;
-        return $this;
-    }
-
-    /**
-     * Get the layouts key
-     *
-     * @return string
-     * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
-     */
-    public function getKey() : string
-    {
-        return $this->key;
-    }
-
-    /**
-     * Set the layouts name
-     *
-     * @param string $name
-     * @return self
-     * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
-     */
-    public function name(string $name) : self
-    {
-        $this->name = $name;
-        return $this;
-    }
-
-    /**
-     * Get the layouts name
-     *
-     * @return string
-     * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
-     */
-    public function getName() : string
-    {
-        return $this->name;
     }
 
     /**

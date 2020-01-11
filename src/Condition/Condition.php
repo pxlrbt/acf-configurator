@@ -2,13 +2,13 @@
 
 namespace pxlrbt\AcfConfigurator\Condition;
 
-use pxlrbt\AcfConfigurator\Traits\ValidateOptions;
-use pxlrbt\AcfConfigurator\Component;
 use pxlrbt\AcfConfigurator\Field;
+use pxlrbt\AcfConfigurator\Traits\ValidateOptions;
+use pxlrbt\AcfConfigurator\Traits\ToArray;
 
-class Condition extends Component
+class Condition
 {
-    use ValidateOptions;
+    use ToArray, ValidateOptions;
 
     // Operator constants for autocompletion
     public static $OPERATOR_EQUALS = '==';
