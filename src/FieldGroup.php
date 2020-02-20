@@ -2,7 +2,6 @@
 
 namespace pxlrbt\AcfConfigurator;
 
-use InvalidArgumentException;
 use pxlrbt\AcfConfigurator\Location\Builder;
 use pxlrbt\AcfConfigurator\Traits\ValidateOptions;
 
