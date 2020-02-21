@@ -10,7 +10,7 @@ trait DefaultValue
      * Set a default value used by ACF if no value has yet been saved
      *
      * @param string $default
-     * @return self
+     * @return static
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */

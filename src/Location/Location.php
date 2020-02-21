@@ -63,7 +63,7 @@ class Location
      * Set location param
      *
      * @param string $operator
-     * @return self this
+     * @return static this
      */
     public function param(string $value)
     {
@@ -87,7 +87,7 @@ class Location
      * Set location operator
      *
      * @param string $operator
-     * @return self this
+     * @return static this
      */
     public function operator(string $operator)
     {
@@ -105,7 +105,7 @@ class Location
      * Set Location value
      *
      * @param string $value
-     * @return self this
+     * @return static this
      */
     public function value($value)
     {

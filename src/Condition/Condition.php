@@ -43,7 +43,7 @@ class Condition
      * This field the condition is validated against.
      *
      * @param Field|string $field
-     * @return self
+     * @return static
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
@@ -62,7 +62,7 @@ class Condition
      * Set conditions operator
      *
      * @param string $value
-     * @return self
+     * @return static
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
@@ -81,7 +81,7 @@ class Condition
      * Set conditions value
      *
      * @param string $value
-     * @return self this
+     * @return static this
      */
     public function value($value)
     {

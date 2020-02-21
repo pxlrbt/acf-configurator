@@ -26,7 +26,7 @@ abstract class Builder
      * @param mixed $field
      * @param string $operator
      * @param mixed $value
-     * @return self
+     * @return static
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
@@ -45,7 +45,7 @@ abstract class Builder
      * @param mixed $field
      * @param string $operator
      * @param mixed $value
-     * @return self
+     * @return static
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */

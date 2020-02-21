@@ -84,7 +84,7 @@ abstract class Component
      * Used to save and load data. Single word, no spaces. Underscores and dashes allowed.
      *
      * @param string $name
-     * @return self
+     * @return static
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */

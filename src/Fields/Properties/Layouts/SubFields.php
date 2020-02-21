@@ -15,7 +15,7 @@ trait SubFields
      *
      * @throws InvalidArgumentException Throws error if layout is not valid.
      * @param string $layout New layout.
-     * @return self
+     * @return static
      */
     public function layout(string $value)
     {

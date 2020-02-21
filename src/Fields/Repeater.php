@@ -34,7 +34,7 @@ class Repeater extends Field
      * Set field whose value is shown when collapsed.
      *
      * @param mixed $field The field object or key to use.
-     * @return self
+     * @return static
      */
     public function collapsed($field)
     {

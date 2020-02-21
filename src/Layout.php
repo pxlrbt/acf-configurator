@@ -39,7 +39,7 @@ class Layout extends Component
      * Set the layouts label.
      *
      * @param string $label
-     * @return self
+     * @return static
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */
@@ -53,7 +53,7 @@ class Layout extends Component
      * Set layouts diplay type.
      *
      * @param string $value
-     * @return self
+     * @return static
      * @author Dennis Koch <info@pixelarbeit.de>
      * @since 1.0.0
      */

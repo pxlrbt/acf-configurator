@@ -10,7 +10,7 @@ trait ButtonLabel
      * Set add row button label
      *
      * @param string $button_label Text to show inside button.
-     * @return self
+     * @return static
      */
     public function buttonLabel(string $value)
     {

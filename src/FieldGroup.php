@@ -89,7 +89,7 @@ class FieldGroup extends Component
      * Set groups title
      *
      * @param string $title
-     * @return self this
+     * @return static this
      */
     public function title(string $title)
     {
@@ -102,7 +102,7 @@ class FieldGroup extends Component
      * Expects a callbacle which is passed a Location builder.
      *
      * @param callable $callback
-     * @return self this
+     * @return static this
      */
     public function location(callable $callback)
     {
@@ -116,7 +116,7 @@ class FieldGroup extends Component
      * Add multiple fields to group
      *
      * @param array $fields
-     * @return self this
+     * @return static this
      */
     public function fields(array $fields)
     {
@@ -131,7 +131,7 @@ class FieldGroup extends Component
      * Add a single field to group
      *
      * @param Field $field
-     * @return self this
+     * @return static this
      */
     public function field(Field $field)
     {
@@ -144,7 +144,7 @@ class FieldGroup extends Component
      * Field groups are shown in order from lowest to highest.
      *
      * @param integer $order
-     * @return self this
+     * @return static this
      */
     public function order(int $order)
     {
@@ -156,7 +156,7 @@ class FieldGroup extends Component
      * Set the position on the edit screen.
      *
      * @param string $position
-     * @return self this
+     * @return static this
      */
     public function position(string $position)
     {
@@ -169,7 +169,7 @@ class FieldGroup extends Component
      * Set the metabox style.
      *
      * @param string $style
-     * @return self this
+     * @return static this
      */
     public function style(string $style)
     {
@@ -182,7 +182,7 @@ class FieldGroup extends Component
      * Set where field labels are places in relation to fields.
      *
      * @param string $placement
-     * @return self this
+     * @return static this
      */
     public function labelPlacement(string $placement)
     {
@@ -195,7 +195,7 @@ class FieldGroup extends Component
      * Set where field instructions are places in relation to fields.
      *
      * @param string $placement
-     * @return self this
+     * @return static this
      */
     public function instructionPlacement(string $placement)
     {
@@ -208,7 +208,7 @@ class FieldGroup extends Component
      * Add element which will be hidden from screen
      *
      * @param string $hide
-     * @return self this
+     * @return static this
      */
     public function hide(string $hide)
     {
