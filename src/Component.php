@@ -18,7 +18,6 @@ abstract class Component
      * @param array ...$args
      * @return mixed
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public static function make(...$args)
     {
@@ -30,7 +29,6 @@ abstract class Component
      *
      * @return string
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function getKeyPrefix() : string
     {
@@ -44,7 +42,6 @@ abstract class Component
      * @param string $key
      * @return void
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function key(string $key)
     {
@@ -71,7 +68,6 @@ abstract class Component
      *
      * @return string|null $key
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function getKey() : ?string
     {
@@ -86,7 +82,6 @@ abstract class Component
      * @param string $name
      * @return static
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function name(string $name)
     {
@@ -99,7 +94,6 @@ abstract class Component
      *
      * @return void
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function getName()
     {
@@ -112,7 +106,6 @@ abstract class Component
      * @param Component $value
      * @return void
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function parent($value)
     {
@@ -124,7 +117,6 @@ abstract class Component
      *
      * @return Component|null
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function getParent() : ?Component
     {
@@ -136,7 +128,6 @@ abstract class Component
      *
      * @return string
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function generateKey() : string
     {
@@ -158,7 +149,6 @@ abstract class Component
      *
      * @return array $config
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function toArray()
     {
@@ -191,7 +181,6 @@ abstract class Component
      *
      * @return void
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function build()
     {

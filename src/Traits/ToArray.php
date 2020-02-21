@@ -9,7 +9,6 @@ trait ToArray
      *
      * @return array $config
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function toArray()
     {

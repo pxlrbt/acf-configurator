@@ -10,7 +10,6 @@ trait FactoryPattern
      * @param array ...$args
      * @return Component
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public static function make(...$args)
     {

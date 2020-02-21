@@ -15,7 +15,6 @@ trait ValidateOptions
      * @param array $options
      * @return void
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     protected function validateOptions(string $name, string $value, array $options)
     {

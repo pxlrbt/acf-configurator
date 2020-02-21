@@ -65,7 +65,6 @@ class Group extends Component
      * @param string $title
      * @param string $name
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function __construct(string $title, string $name)
     {
@@ -79,7 +78,6 @@ class Group extends Component
      *
      * @return void
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function register()
     {
@@ -93,7 +91,6 @@ class Group extends Component
      * @param string $key
      * @return self this
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function key(string $key)
     {

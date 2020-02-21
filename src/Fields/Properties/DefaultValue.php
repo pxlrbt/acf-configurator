@@ -12,7 +12,6 @@ trait DefaultValue
      * @param string $default
      * @return static
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function default(string $default)
     {

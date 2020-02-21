@@ -29,7 +29,6 @@ class Condition
      * @param string  $operator
      * @param mixed $value
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function __construct(string $field, string $operator, $value = null)
     {
@@ -45,7 +44,6 @@ class Condition
      * @param Field|string $field
      * @return static
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function field($field)
     {
@@ -64,7 +62,6 @@ class Condition
      * @param string $value
      * @return static
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function operator(string $value)
     {

@@ -27,7 +27,6 @@ class Layout extends Component
      * @param string $label
      * @param string $name
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function __construct(string $label, string $name)
     {
@@ -41,7 +40,6 @@ class Layout extends Component
      * @param string $label
      * @return static
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function label(string $label)
     {
@@ -55,7 +53,6 @@ class Layout extends Component
      * @param string $value
      * @return static
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function display(string $value)
     {

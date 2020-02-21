@@ -33,7 +33,6 @@ abstract class Field extends Component
      * @param string $label
      * @return self
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function label(string $label)
     {
@@ -48,7 +47,6 @@ abstract class Field extends Component
      * @param string $instructions
      * @return self
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function instructions(string $instructions)
     {
@@ -62,7 +60,6 @@ abstract class Field extends Component
      * @param boolean $required
      * @return self
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function required(bool $required)
     {
@@ -77,7 +74,6 @@ abstract class Field extends Component
      * @param callable $callback
      * @return self
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function condition(callable $callback)
     {
@@ -95,7 +91,6 @@ abstract class Field extends Component
      * @param string $id
      * @return self
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function wrapper(float $width, string $class = null, string $id = null)
     {

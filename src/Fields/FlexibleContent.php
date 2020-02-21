@@ -36,7 +36,6 @@ class FlexibleContent extends Field
      * @param array $layouts
      * @return self
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function addLayouts(array $layouts)
     {
@@ -53,7 +52,6 @@ class FlexibleContent extends Field
      * @param Layout $layout
      * @return self
      * @author Dennis Koch <info@pixelarbeit.de>
-     * @since 1.0.0
      */
     public function addLayout(Layout $layout)
     {
