@@ -13,7 +13,7 @@ trait AppendPrepend
      *
      * @param   mixed  $prepend
      *
-     * @return  self
+     * @return  static
      */
     public function prepend(string $value)
     {
@@ -26,7 +26,7 @@ trait AppendPrepend
      *
      * @param   mixed  $append
      *
-     * @return  self
+     * @return  static
      */
     public function append(string $value)
     {

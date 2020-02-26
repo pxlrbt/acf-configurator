@@ -21,7 +21,7 @@ class Image extends Field
      * Set the value of preview size
      *
      * @param   string  $preview size name
-     * @return  self
+     * @return  static
      */
     public function preview(string $value)
     {

@@ -11,7 +11,7 @@ trait MinMax
      * Set the value of min
      *
      * @param   int  $max
-     * @return  self
+     * @return  static
      */
     public function min(int $value)
     {
@@ -23,7 +23,7 @@ trait MinMax
      * Set the value of max
      *
      * @param   int  $max
-     * @return  self
+     * @return  static
      */
     public function max(int $value)
     {

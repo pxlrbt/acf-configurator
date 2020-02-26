@@ -10,7 +10,7 @@ trait Step
      * Set the value of step
      *
      * @param   mixed  $step
-     * @return  self
+     * @return  static
      */
     public function step(int $value)
     {

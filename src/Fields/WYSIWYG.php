@@ -27,7 +27,7 @@ class WYSIWYG extends Field
      * Set the value of tabs
      *
      * @param   string  $tabs
-     * @return  self
+     * @return  static
      */
     public function tabs(string $value)
     {
@@ -40,7 +40,7 @@ class WYSIWYG extends Field
      * Set the value of toolbar
      *
      * @param   string  $toolbar
-     * @return  self
+     * @return  static
      */
     public function toolbar(string $value)
     {

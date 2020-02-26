@@ -16,7 +16,7 @@ trait Newlines
      *
      * @param   mixed  $append
      *
-     * @return  self
+     * @return  static
      */
     public function newlines(string $value)
     {

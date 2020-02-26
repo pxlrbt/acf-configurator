@@ -31,7 +31,7 @@ trait TextProperties
      *
      * @param   mixed  $maxlength
      *
-     * @return  self
+     * @return  static
      */
     public function maxlength(string $value)
     {
@@ -44,7 +44,7 @@ trait TextProperties
      *
      * @param   mixed  $readonly
      *
-     * @return  self
+     * @return  static
      */
     public function readonly(bool $value)
     {
@@ -57,7 +57,7 @@ trait TextProperties
      *
      * @param   mixed  $disabled
      *
-     * @return  self
+     * @return  static
      */
     public function disabled(bool $value)
     {

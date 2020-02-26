@@ -20,7 +20,7 @@ class Textarea extends Field
      *
      * @param   mixed  $rows
      *
-     * @return  self
+     * @return  static
      */
     public function rows(int $value)
     {

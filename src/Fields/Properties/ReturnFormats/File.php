@@ -14,7 +14,7 @@ trait File
      * Set the value of format
      *
      * @param   string  $format
-     * @return  self
+     * @return  static
      */
     public function returnFormat(string $value)
     {

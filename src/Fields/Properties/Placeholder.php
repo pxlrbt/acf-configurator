@@ -11,7 +11,7 @@ trait Placeholder
      *
      * @param   mixed  $placeholder
      *
-     * @return  self
+     * @return  static
      */
     public function placeholder(string $value)
     {

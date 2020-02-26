@@ -13,7 +13,7 @@ trait Library
      * Set the value of library
      *
      * @param   mixed  $library
-     * @return  self
+     * @return  static
      */
     public function library(string $value)
     {
