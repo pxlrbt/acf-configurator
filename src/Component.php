@@ -13,22 +13,9 @@ abstract class Component
     protected $name;
 
     /**
-     * Factory function to create a new instance
-     *
-     * @param array ...$args
-     * @return mixed
-     * @author Dennis Koch <info@pixelarbeit.de>
-     */
-    public static function make(...$args)
-    {
-        return new static(...$args);
-    }
-
-    /**
      * Get the components key prefix
      *
      * @return string
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function getKeyPrefix() : string
     {
@@ -41,7 +28,6 @@ abstract class Component
      *
      * @param string $key
      * @return void
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function key(string $key)
     {
@@ -67,7 +53,6 @@ abstract class Component
      * Get the components key
      *
      * @return string|null $key
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function getKey() : ?string
     {
@@ -81,7 +66,6 @@ abstract class Component
      *
      * @param string $name
      * @return static
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function name(string $name)
     {
@@ -93,7 +77,6 @@ abstract class Component
      * Get the fields name
      *
      * @return void
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function getName()
     {
@@ -105,7 +88,6 @@ abstract class Component
      *
      * @param Component $value
      * @return void
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function parent($value)
     {
@@ -116,7 +98,6 @@ abstract class Component
      * Get parent component
      *
      * @return Component|null
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function getParent() : ?Component
     {
@@ -127,7 +108,6 @@ abstract class Component
      * Generate key based on components name and parent components
      *
      * @return string
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function generateKey() : string
     {
@@ -148,7 +128,6 @@ abstract class Component
      * Cast component and sub fields to array
      *
      * @return array $config
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function toArray()
     {
@@ -180,7 +159,6 @@ abstract class Component
      * Build components configuration
      *
      * @return void
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function build()
     {

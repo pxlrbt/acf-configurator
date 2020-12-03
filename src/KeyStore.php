@@ -11,7 +11,6 @@ class KeyStore
      *
      * @param string $key
      * @return boolean
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public static function contains(string $key) : bool
     {
@@ -23,7 +22,6 @@ class KeyStore
      *
      * @param string $key
      * @return void
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public static function add(string $key)
     {
@@ -35,7 +33,6 @@ class KeyStore
      *
      * @param string $key
      * @return void
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public static function remove(string $key)
     {

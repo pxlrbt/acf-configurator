@@ -64,7 +64,6 @@ class Group extends Component
      *
      * @param string $title
      * @param string $name
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function __construct(string $title, string $name)
     {
@@ -74,10 +73,19 @@ class Group extends Component
     }
 
     /**
+     * @param string $title
+     * @param string $name
+     * @return static
+     */
+    public static function make(string $title, string $name)
+    {
+        return new self($title, $name);
+    }
+
+    /**
      * Registers group configuration
      *
      * @return void
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function register()
     {
@@ -89,8 +97,7 @@ class Group extends Component
      * Unique identifier for field group. Must begin with 'group_'
      *
      * @param string $key
-     * @return self this
-     * @author Dennis Koch <info@pixelarbeit.de>
+     * @return static
      */
     public function key(string $key)
     {
@@ -106,7 +113,7 @@ class Group extends Component
      * Set groups title
      *
      * @param string $title
-     * @return self this
+     * @return static
      */
     public function title(string $title)
     {
@@ -119,7 +126,7 @@ class Group extends Component
      * Expects a callbacle which is passed a Location builder.
      *
      * @param callable $callback
-     * @return self this
+     * @return static
      */
     public function location(callable $callback)
     {
@@ -133,7 +140,7 @@ class Group extends Component
      * Add multiple fields to group
      *
      * @param array $fields
-     * @return self this
+     * @return static
      */
     public function fields(array $fields)
     {
@@ -148,7 +155,7 @@ class Group extends Component
      * Add a single field to group
      *
      * @param Field $field
-     * @return self this
+     * @return static
      */
     public function field(Field $field)
     {
@@ -161,7 +168,7 @@ class Group extends Component
      * Field groups are shown in order from lowest to highest.
      *
      * @param integer $order
-     * @return self this
+     * @return static
      */
     public function order(int $order)
     {
@@ -173,7 +180,7 @@ class Group extends Component
      * Set the position on the edit screen.
      *
      * @param string $position
-     * @return self this
+     * @return static
      */
     public function position(string $position)
     {
@@ -186,7 +193,7 @@ class Group extends Component
      * Set the metabox style.
      *
      * @param string $style
-     * @return self this
+     * @return static
      */
     public function style(string $style)
     {
@@ -199,7 +206,7 @@ class Group extends Component
      * Set where field labels are places in relation to fields.
      *
      * @param string $placement
-     * @return self this
+     * @return static
      */
     public function labelPlacement(string $placement)
     {
@@ -212,7 +219,7 @@ class Group extends Component
      * Set where field instructions are places in relation to fields.
      *
      * @param string $placement
-     * @return self this
+     * @return static
      */
     public function instructionPlacement(string $placement)
     {
@@ -225,7 +232,7 @@ class Group extends Component
      * Add element which will be hidden from screen
      *
      * @param string $hide
-     * @return self this
+     * @return static
      */
     public function hide(string $hide)
     {

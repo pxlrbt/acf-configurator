@@ -26,7 +26,6 @@ class Layout extends Component
      *
      * @param string $label
      * @param string $name
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function __construct(string $label, string $name)
     {
@@ -35,11 +34,20 @@ class Layout extends Component
     }
 
     /**
+     * @param string $label
+     * @param string $name
+     * @return static
+     */
+    public static function make(string $label, string $name)
+    {
+        return new self($label, $name);
+    }
+
+    /**
      * Set the layouts label.
      *
      * @param string $label
      * @return static
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function label(string $label)
     {
@@ -52,7 +60,6 @@ class Layout extends Component
      *
      * @param string $value
      * @return static
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function display(string $value)
     {

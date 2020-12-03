@@ -63,7 +63,6 @@ class FieldGroup extends Component
      *
      * @param string $title
      * @param string $name
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function __construct(string $title, string $name)
     {
@@ -73,10 +72,19 @@ class FieldGroup extends Component
     }
 
     /**
+     * @param string $title
+     * @param string $name
+     * @return static
+     */
+    public static function make(string $title, string $name)
+    {
+        return new self($title, $name);
+    }
+
+    /**
      * Registers group configuration
      *
      * @return void
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function register()
     {

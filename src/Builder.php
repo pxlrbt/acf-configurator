@@ -11,7 +11,6 @@ abstract class Builder
     /**
      * Create new builder
      *
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function __construct()
     {
@@ -26,7 +25,6 @@ abstract class Builder
      * @param string $operator
      * @param mixed $value
      * @return static
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function if($field, $operator = null, $value = null)
     {
@@ -44,7 +42,6 @@ abstract class Builder
      * @param string $operator
      * @param mixed $value
      * @return static
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function andIf($field, $operator, $value = null)
     {
@@ -58,7 +55,6 @@ abstract class Builder
      * Get last added group
      *
      * @return array group or empty array
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     private function getLastGroup() : array
     {
@@ -70,7 +66,6 @@ abstract class Builder
      * Cast builders conditions to array
      *
      * @return array $configurations
-     * @author Dennis Koch <info@pixelarbeit.de>
      */
     public function toArray() : array
     {

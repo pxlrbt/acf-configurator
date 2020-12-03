@@ -26,13 +26,21 @@ abstract class Field extends Component
         $this->label($label);
     }
 
+    /**
+     * @param string $label
+     * @param string $name
+     * @return static
+     */
+    public static function make($label, $name)
+    {
+        return new self($label, $name);
+    }
 
     /**
      * Set the label which is visible when editing the field value
      *
      * @param string $label
-     * @return self
-     * @author Dennis Koch <info@pixelarbeit.de>
+     * @return static
      */
     public function label(string $label)
     {
@@ -45,8 +53,7 @@ abstract class Field extends Component
      * Shown when submitting data.
      *
      * @param string $instructions
-     * @return self
-     * @author Dennis Koch <info@pixelarbeit.de>
+     * @return static
      */
     public function instructions(string $instructions)
     {
@@ -58,8 +65,7 @@ abstract class Field extends Component
      * Set hether or not the field value is required
      *
      * @param boolean $required
-     * @return self
-     * @author Dennis Koch <info@pixelarbeit.de>
+     * @return static
      */
     public function required(bool $required)
     {
@@ -72,8 +78,7 @@ abstract class Field extends Component
      * Expects a callable which is passed a condition builder.
      *
      * @param callable $callback
-     * @return self
-     * @author Dennis Koch <info@pixelarbeit.de>
+     * @return static
      */
     public function condition(callable $callback)
     {
@@ -89,8 +94,7 @@ abstract class Field extends Component
      * @param float $width
      * @param string $class
      * @param string $id
-     * @return self
-     * @author Dennis Koch <info@pixelarbeit.de>
+     * @return static
      */
     public function wrapper(float $width, string $class = null, string $id = null)
     {
