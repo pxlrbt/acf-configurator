@@ -33,7 +33,7 @@ abstract class Field extends Component
      */
     public static function make($label, $name)
     {
-        return new self($label, $name);
+        return new static($label, $name);
     }
 
     /**
