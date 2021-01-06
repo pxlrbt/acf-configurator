@@ -76,7 +76,7 @@ class Location
             self::$PARAM_CURRENT_USER_ROLE, self::$PARAM_USER_FORM, self::$PARAM_USER_ROLE,
             self::$PARAM_TAXONOMY, self::$PARAM_ATTACHMENT, self::$PARAM_COMMENT,
             self::$PARAM_WIDGET, self::$PARAM_NAV_MENU, self::$PARAM_NAV_MENU_ITEM,
-            self::$PARAM_OPTIONS_PAGE,
+            self::$PARAM_BLOCK, self::$PARAM_OPTIONS_PAGE,
         ];
 
         $this->validateOptions('param', $value, $validOptions);
