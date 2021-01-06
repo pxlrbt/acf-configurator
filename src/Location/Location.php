@@ -31,6 +31,7 @@ class Location
     public static $PARAM_WIDGET = 'widget';
     public static $PARAM_NAV_MENU = 'nav_menu';
     public static $PARAM_NAV_MENU_ITEM = 'nav_menu_item';
+    public static $PARAM_BLOCK = 'block';
     public static $PARAM_OPTIONS_PAGE = 'options_page';
 
     // Operator constants for autocompletion
