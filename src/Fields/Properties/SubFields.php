@@ -17,7 +17,7 @@ trait SubFields
     public function fields(array $fields)
     {
         foreach ($fields as $field) {
-            $field->parent = $this;
+            $field->parent($this);
             $this->field($field);
         }
 

@@ -32,7 +32,7 @@ abstract class Component
     public function key(string $key)
     {
         if (strpos($key, $this->getKeyPrefix()) === false) {
-            throw new InvalidArgumentException('Key must start with "' . $this->getKeyPrefix() .'"');
+            throw new InvalidArgumentException('Key must start with "' . $this->getKeyPrefix() .'": ' . $key);
         }
 
         if ($this->key !== null) {
@@ -40,7 +40,7 @@ abstract class Component
         }
 
         if (KeyStore::contains($key)) {
-            throw new InvalidArgumentException('Key must be unique');
+            throw new InvalidArgumentException('Key is not unique: ' . $key);
         }
 
         KeyStore::add($key);
@@ -114,10 +114,13 @@ abstract class Component
         $key = $this->getName();
         $parent = $this->getParent();
 
-        while ($parent !== null) {
+        if ($parent !== null) {
             $key = substr($parent->getKey(), strlen($parent->getKeyPrefix())) . '__' . $key;
-            $parent = $parent->getParent();
         }
+//        while ($parent !== null) {
+//            dump(1, $key, $parent);
+//            $parent = $parent->getParent();
+//        }
 
         $key = preg_replace('/[^\da-z_]/i', '', $key);
 

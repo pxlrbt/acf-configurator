@@ -141,6 +141,7 @@ class FieldGroup extends Component
      */
     public function field(Field $field)
     {
+        $field->parent($this);
         $this->fields[] = $field;
         return $this;
     }
