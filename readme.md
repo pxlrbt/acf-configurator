@@ -70,10 +70,12 @@ FieldGroup::make('Test group', 'test')
 
 ## Alternatives
 
-This plugin doesn't fit your needs? Here are two alternatives:
+This plugin doesn't fit your needs? Here are some alternatives:
 
-- [ACF Code Helper by RadoslavGeorgiev](https://github.com/RadoslavGeorgiev/acf-code-helper/wiki)
+- [Extended ACF by Wordplate](https://github.com/wordplate/extended-acf)
+- [ACF Code Helper by RadoslavGeorgiev](https://github.com/RadoslavGeorgiev/acf-code-helper)
 - [ACF Builder by StoutLogic](https://github.com/StoutLogic/acf-builder)
+
 
 ## Contributing
 
